@@ -1,0 +1,234 @@
+/* Main layout containers */
+.page-container {
+  min-height: 100vh;
+  background-color: #99cccc;
+  padding: 32px 16px;
+}
+
+.content-wrapper {
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+/* Typography */
+.page-title {
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 32px;
+  color: #000;
+}
+
+.dashboard-header {
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 24px;
+  color: #fff;
+}
+
+/* Main panel */
+.reminder-panel {
+  background: linear-gradient(to bottom, #99cccc, #3b82f6);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 32px;
+}
+
+/* Grid rows */
+.reminder-row {
+  display: grid;
+  grid-template-columns: 70px 90px 1fr 80px 80px;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+/* Status blocks */
+.status-block {
+  background-color: #22c55e;
+  border: 2px solid #374151;
+  text-align: center;
+  padding: 8px 0;
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 2px;
+}
+
+.status-block.off {
+  background-color: #ef4444;
+}
+
+/* Timer display */
+.timer-display {
+  background-color: #fff;
+  border: 2px solid #374151;
+  text-align: center;
+  padding: 8px 0;
+  color: #000;
+  font-weight: 700;
+  font-size: 16px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Courier New', monospace;
+}
+
+/* Reminder text */
+.reminder-text {
+  background-color: #fff;
+  border: 2px solid #374151;
+  padding: 8px 12px;
+  border-radius: 2px;
+  font-weight: 500;
+  color: #000;
+}
+
+/* Action buttons */
+.action-button {
+  background-color: #d1d5db;
+  border: 2px solid #374151;
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.action-button:hover {
+  background-color: #e5e7eb;
+}
+
+/* Add Reminder button */
+.add-reminder-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.add-reminder-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin: 10px auto;
+  background-color: #cffafe;
+  border: 1px solid #000;
+  border-radius: 8px;
+  width: fit-content;
+}
+
+.add-reminder-link {
+  padding: 8px 16px;
+  margin: 0 4px;
+  color: #374151;
+  text-decoration: none;
+  border: 1px solid #000;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  background-color: transparent;
+  font-size: 14px;
+}
+
+.add-reminder-link:hover {
+  background-color: #fcd34d;
+  border-color: #9ca3af;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation Dropdown Styles */
+.nav-hamburger-button {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  z-index: 50;
+  padding: 12px;
+  border: 2px solid #000;
+  border-radius: 8px;
+  cursor: pointer;
+  background: none;
+}
+
+.hamburger-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 24px;
+}
+
+.hamburger-line {
+  height: 2px;
+  background-color: #000;
+  width: 100%;
+}
+
+.nav-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 200px;
+  background-color: #22c55e;
+  border: 4px solid #000;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  z-index: 40;
+  padding: 80px 16px 16px 16px;
+}
+
+.nav-sidebar.open {
+  transform: translateX(0);
+}
+
+.nav-sidebar.closed {
+  transform: translateX(-100%);
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  border: 2px solid #000;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nav-link-home {
+  background-color: #16a34a;
+}
+
+.nav-link-home:hover {
+  background-color: #15803d;
+}
+
+.nav-link-settings {
+  background-color: #ef4444;
+}
+
+.nav-link-settings:hover {
+  background-color: #dc2626;
+}
+
+.nav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 30;
+}
